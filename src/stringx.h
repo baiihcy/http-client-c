@@ -151,7 +151,7 @@ char *str_replace(char *search , char *replace , char *subject)
 		c++;
 	}	
 	c = ( strlen(replace) - search_size )*c + strlen(subject);
-	new_subject = (char*)malloc( c );
+	new_subject = (char*)malloc( c + 1 );
 	strcpy(new_subject , "");
 	old = subject;	
 	for(p = strstr(subject , search) ; p != NULL ; p = strstr(p + search_size , search))
